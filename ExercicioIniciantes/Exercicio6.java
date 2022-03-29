@@ -35,17 +35,12 @@ public class Exercicio6 {
         double retangulo = varA * varB;
 
         sc1.close();
-        
-        System.out.print("TRIANGULO: ");
-        System.out.printf("%.3f", triangulo);
-        System.out.print("\nCIRCULO: ");
-        System.out.printf("%.3f", circulo);
-        System.out.print("\nTRAPEZIO: ");
-        System.out.printf("%.3f", trapezio);
-        System.out.print("\nQUADRADO: ");
-        System.out.printf("%.3f", quadrado);
-        System.out.print("\nRETANGULO: ");
-        System.out.printf("%.3f", retangulo);
+
+        System.out.printf("TRIANGULO: %.3f", triangulo);
+        System.out.printf("\nCIRCULO: %.3f", circulo);
+        System.out.printf("\nTRAPEZIO: %.3f", trapezio);
+        System.out.printf("\nQUADRADO: %.3f", quadrado);
+        System.out.printf("\nRETANGULO: %.3f", retangulo);
 
     }
 }

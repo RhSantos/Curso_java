@@ -23,8 +23,8 @@ public class Exercicio5 {
         double valorPc2 = sc1.nextDouble();
 
         sc1.close();
-        System.out.print("VALOR A PAGAR = R$ ");
-        System.out.printf("%.2f", (valorPc1 * numPc1) + (valorPc2 * numPc2));
+        System.out.printf("VALOR A PAGAR = R$ %.2f", 
+        (valorPc1 * numPc1) + (valorPc2 * numPc2));
 
     }
 }

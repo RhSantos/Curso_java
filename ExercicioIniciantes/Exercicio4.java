@@ -18,8 +18,7 @@ public class Exercicio4 {
         double horasValor = sc1.nextDouble();
         sc1.close();
         System.out.println("NUMBER = " + numFunc);
-        System.out.print("SALARY = U$ ");
-        System.out.printf("%.2f", (horasTrab * horasValor));
+        System.out.printf("SALARY = U$ %.2f", (horasTrab * horasValor));
 
     }
 }
