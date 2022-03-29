@@ -25,7 +25,7 @@ public class Exercicio2 {
                 System.out.println("segundo");}
             else if(cordX < 0 && cordY < 0){
                 System.out.println("terceiro");}
-            else if(cordX > 0 && cordY < 0){
+            else{
                 System.out.println("quarto");}
 
             cordX = sc1.nextInt();
