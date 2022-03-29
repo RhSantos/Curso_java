@@ -26,7 +26,7 @@ public class Exercicio3 {
             }
         }
 
-        else if (numA < numB) {
+        else {
             if (numB % numA == 0) {
                 System.out.println("Sao Multiplos");
             } else {
