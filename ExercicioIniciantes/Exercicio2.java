@@ -9,6 +9,7 @@ public class Exercicio2 {
         double pi = 3.14159;
         double x = sc1.nextDouble();
         sc1.close();
+        System.out.print("A=");
         System.out.printf("%.2f",(x*pi));
 
     }
