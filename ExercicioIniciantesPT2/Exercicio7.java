@@ -17,18 +17,18 @@ public class Exercicio7 {
          */
         Scanner sc1 = new Scanner(System.in);
 
-        double eixoX = sc1.nextDouble();
-        double eixoY = sc1.nextDouble();
+        double cordX = sc1.nextDouble();
+        double cordY = sc1.nextDouble();
 
         sc1.close();
 
-        if (eixoX == 0.0 && eixoY == 0.0) {
+        if (cordX == 0.0 && cordY == 0.0) {
             System.out.println("Origem");
-        } else if (eixoX > 0.0 && eixoY > 0.0) {
+        } else if (cordX > 0.0 && cordY > 0.0) {
             System.out.println("Q1");
-        } else if (eixoX < 0.0 && eixoY > 0.0) {
+        } else if (cordX < 0.0 && cordY > 0.0) {
             System.out.println("Q2");
-        } else if (eixoX < 0.0 && eixoY < 0.0) {
+        } else if (cordX < 0.0 && cordY < 0.0) {
             System.out.println("Q3");
         } else {
             System.out.println("Q4");
