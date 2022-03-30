@@ -3,13 +3,12 @@ package JavaPOO.ExercicioFixacao1;
 import java.lang.Math;
 
 public class Rectangle {
+    
     private double width;
     private double height;
 
     
-    public Rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
+    public Rectangle() {
     }
 
 
