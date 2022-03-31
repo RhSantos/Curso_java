@@ -18,5 +18,6 @@ public class ArrayExemplo {
         double media = alturasSoma/n;
 
         System.out.printf("AVERAGE HEIGHT = %.2f", media);
+        sc.close();
     }
 }
