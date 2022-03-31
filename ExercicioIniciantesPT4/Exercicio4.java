@@ -3,26 +3,32 @@ package ExercicioIniciantesPT4;
 import java.util.Scanner;
 
 public class Exercicio4 {
+    
     public static void main(String[] args) {
         /*
-         * Ler um valor N. Calcular e escrever seu
-         * respectivo fatorial.
-         * Fatorial de N = N * (N-1) * (N-2) * (N-3) * ... *1.
-         * Lembrando que, por definição, fatorial de 0 é 1.
-         */
+            Fazer um programa para ler um número N. 
+            Depois leia N pares de números e mostre a 
+            divisão do primeiro pelo segundo. Se o denominador
+            for igual a zero, mostrar a mensagem 
+            "divisao impossivel".
+        */
+
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int fatorial = n;
 
-        for(int i=1;i<n;i++){
-            fatorial *= i;
+        for(int i=0;i<n;i++){
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            if(y == 0){
+                System.out.println("divisao impossivel");
+            }
+            else{
+                System.out.println((double)(x/y));
+            }
         }
-
-        if(n == 0 || n == 1) fatorial = 1;
-
-        System.out.println(fatorial);
 
         sc.close();
     }
+
 }
