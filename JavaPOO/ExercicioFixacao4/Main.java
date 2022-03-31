@@ -2,8 +2,6 @@ package JavaPOO.ExercicioFixacao4;
 
 import java.util.Scanner;
 
-import javax.script.ScriptEngineManager;
-
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -26,6 +24,7 @@ public class Main {
             Conta conta = new Conta(numero,nome,depositoInicial);
             continuacao(conta);
         }
+        sc.close();
     } 
 
     public static void continuacao(Conta conta){
@@ -44,5 +43,6 @@ public class Main {
         System.out.println();
         conta.realizarSaque(saque);
         System.out.println(conta);
+        sc.close();
     }
 }
