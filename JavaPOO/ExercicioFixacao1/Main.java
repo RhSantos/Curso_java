@@ -8,15 +8,19 @@ public class Main {
         
         Scanner sc = new Scanner(System.in);
 
+        double width = sc.nextDouble();
+        double height = sc.nextDouble();
+
         Rectangle r1 = new Rectangle();
         
-        r1.setWidth(sc.nextDouble());
-        r1.setHeight(sc.nextDouble());
+        r1.setWidth(width);
+        r1.setHeight(height);
         
         System.out.println("AREA = "+r1.Area());
         System.out.println("PERIMETRO = "+r1.Perimeter());
         System.out.println("DIAGONAL = "+r1.Diagonal());
 
+        sc.close();
     }
 
 }
