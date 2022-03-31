@@ -7,12 +7,15 @@ public class ArrayExemplo {
         int n = sc.nextInt();
 
         double[] alturas = new double[n];
+        double alturasSoma = 0.0;
 
         for(int i=0;i<alturas.length;i++){
-            alturas[i] = sc.nextDouble();
+            double altura = sc.nextDouble();
+            alturas[i] = altura;
+            alturasSoma += altura;
         }
 
-        double media = (alturas[0] + alturas[1] + alturas[2])/n;
+        double media = alturasSoma/n;
 
         System.out.printf("AVERAGE HEIGHT = %.2f", media);
     }
