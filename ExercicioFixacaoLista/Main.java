@@ -45,7 +45,7 @@ public class Main {
         int idSalario = sc.nextInt();
         Integer posicao = temId(funcionarios,idSalario);
         if(temId(funcionarios,idSalario) != null){
-            System.out.println("\nDigite a porcentagem que quer aumentar!\n");
+            System.out.println("\nDigite a porcentagem que quer aumentar?\n");
             double aumento = sc.nextDouble();
             funcionarios.get(posicao).aumentoSalario(aumento);
             System.out.println("Lista de Funcionários Atualizada!\n");
