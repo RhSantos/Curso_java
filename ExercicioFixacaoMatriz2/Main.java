@@ -1,4 +1,4 @@
-package ExercicioFixacaoMatriz;
+package ExercicioFixacaoMatriz2;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -6,21 +6,27 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a quantidade de Linhas da Matriz");
         int m = sc.nextInt();
+        System.out.println();
+        System.out.println("Digite a quantidade de Colunas da Matriz");
         int n = sc.nextInt();
+        System.out.println();
 
         int[][] matriz = new int[m][n];
 
+        System.out.println("Gerando a Matriz com Números Aleatórios...");
+
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = 2;
+                matriz[i][j] = (int)(1+Math.random()*49);
             }
         }
 
         for (int[] linha : matriz) {
             System.out.println(Arrays.toString(linha));
         }
-
+        System.out.println("\nDigite um número para mostrar seus vizinhos");
         int x = sc.nextInt();
         System.out.println();
         for (int i = 0; i < matriz.length; i++) {
