@@ -35,7 +35,9 @@ public class Main {
             funcionarios.add(funcionario);
         }
 
-        System.out.println(funcionarios);
+        for (Funcionario funcionario : funcionarios) {
+            System.out.println(funcionario);
+        }
 
         System.out.println("Digite o ID do Funcionário que você deseja aumentar o salário!");
         int idSalario = sc.nextInt();
