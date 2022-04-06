@@ -1,4 +1,4 @@
-package ArrayExemplo2;
+package ExercicioFixacaoArrays;
 
 public class Produto {
     
