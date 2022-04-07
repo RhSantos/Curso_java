@@ -52,7 +52,7 @@ public class Main {
             }
         }
         else{
-            System.out.println("\nID não Encontrado!\n");
+            System.out.println("\nID nao Encontrado!\n");
         }
         sc.close();
     }
