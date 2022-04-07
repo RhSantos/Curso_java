@@ -15,11 +15,11 @@ public class Main {
 
         int[][] matriz = new int[m][n];
 
-        System.out.println("Gerando a Matriz com Números Aleatórios...");
-
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
+                System.out.println("Digite um valor a ser adicionado na matriz");
                 matriz[i][j] = sc.nextInt();
+                System.out.println();
             }
         }
 
@@ -32,7 +32,7 @@ public class Main {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
                 if(matriz[i][j] == x) {
-                    System.out.println("Position " + i + "," + j + ":");
+                    System.out.println("Posição (" + i + "," + j + ") :");
 					if (j > 0) {
 						System.out.println("Esquerda: " + matriz[i][j-1]);
 					}
@@ -45,6 +45,7 @@ public class Main {
 					if (i < matriz.length-1) {
 						System.out.println("Baixo: " + matriz[i+1][j]);
 					}
+                    System.out.println();
                 }
             }
         }
