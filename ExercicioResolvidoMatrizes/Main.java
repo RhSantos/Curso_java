@@ -1,4 +1,4 @@
-package ExercicioFixacaoMatriz1;
+package ExercicioResolvidoMatrizes;
 
 import java.util.Scanner;
 
