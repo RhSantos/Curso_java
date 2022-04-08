@@ -67,21 +67,21 @@ public class Post {
     }
 
     @Override
-    public String toString() {
-        return title + "\n" + likes + " Likes - "+ moment + "\n"+content+"\n"+comments();
-    }
-
-    public String comments(){
-        String s = "Comments:\n";
-        if(comments.isEmpty()){
-            s += "This post don't have any comments now.";
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        sb.append(title + "\n");
+        sb.append(likes);
+        sb.append(" Likes -  ");
+        sb.append(sdf.format(moment));
+        sb.append("\n"+content);
+        sb.append("\nComments:\n");
+        for (Comment comment : comments) {
+            sb.append(comment.getText());
+            sb.append("\n");
         }
-        else{
-            for (Comment comment : comments) {
-                s += comment.getText()+"\n";
-            }
-        }
-        return s;
+        
+        return sb.toString();
     }
 
     
