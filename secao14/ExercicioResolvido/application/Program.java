@@ -16,15 +16,15 @@ public class Program {
         int n = sc.nextInt();
         for (int i = 1; i <= n; i++) {
             System.out.println("Employee #"+i+" data:");
-            String outsourced = "";
+            Character outsourced = '\u0000';
             do{
                 System.out.print("Outsourced (y/n)? ");
-                outsourced = sc.next();
+                outsourced = sc.next().charAt(0);
                 sc = new Scanner(System.in);
-                if(!outsourced.equals("y") && !outsourced.equals("n")){
+                if(outsourced !='y' && outsourced !='n'){
                     System.out.print("ERRO - Digite y/n\n");
                 }
-            }while(!outsourced.equals("y") && !outsourced.equals("n"));
+            }while(outsourced !='y' && outsourced !='n');
             System.out.print("Name: ");
             String name = sc.nextLine();
             System.out.print("Hours: ");
@@ -32,7 +32,7 @@ public class Program {
             System.out.print("Value per hour: ");
             Double valuePerHour = sc.nextDouble();
             
-            if(outsourced.equals("y")){
+            if(outsourced == 'y'){
                 System.out.print("Addiotional Charge: ");
                 Double additionalCharge = sc.nextDouble();
                 employees.add(new OutsourcedEmployee(name,hours,valuePerHour,additionalCharge));
