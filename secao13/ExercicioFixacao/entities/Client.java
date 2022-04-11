@@ -1,5 +1,6 @@
 package secao13.ExercicioFixacao.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Client {
@@ -39,7 +40,8 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client [birthDate=" + birthDate + ", email=" + email + ", name=" + name + "]";
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        return name + " ("+sdf.format(birthDate)+") - "+email;
     }
 
     

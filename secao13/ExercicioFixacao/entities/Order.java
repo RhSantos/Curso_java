@@ -70,5 +70,24 @@ public class Order {
             return sum;
         }
     }
+
+    @Override
+    public String toString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        String s = "";
+        s += ("ORDER SUMMARY:\n");
+        s += ("Order Moment: "+sdf.format(moment));
+        s += ("\nOrder Status: "+status);
+        s += ("\nClient: "+client);
+        s += ("\nOrder items:");
+        for (int i = 0; i < items.size(); i++) {
+            s += "\n"+items.get(i);
+        }
+        s += ("\nTotal price: $"+String.format("%.2f",total()));
+
+        return s;
+    }
+
+    
     
 }
