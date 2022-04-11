@@ -2,7 +2,6 @@ package secao13.ExercicioResolvido2.application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import secao13.ExercicioResolvido2.entities.Comment;
 import secao13.ExercicioResolvido2.entities.Post;
