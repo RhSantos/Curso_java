@@ -33,7 +33,7 @@ public class Program {
             Double valuePerHour = sc.nextDouble();
             
             if(outsourced == 'y'){
-                System.out.print("Addiotional Charge: ");
+                System.out.print("Additional Charge: ");
                 Double additionalCharge = sc.nextDouble();
                 employees.add(new OutsourcedEmployee(name,hours,valuePerHour,additionalCharge));
             }
@@ -43,7 +43,7 @@ public class Program {
         }
         System.out.println("\nPAYMENTS:");
         for (int i = 0; i < employees.size(); i++) {
-            System.out.println(employees.get(i).getName()+" - $ "+employees.get(i).payment());
+            System.out.println(employees.get(i).getName()+" - $ "+String.format("%.2f",employees.get(i).payment()));
         }
         sc.close();
     }
