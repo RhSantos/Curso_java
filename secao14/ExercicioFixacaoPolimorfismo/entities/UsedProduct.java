@@ -1,4 +1,4 @@
-package secao14.ExercicioFixacao.entities;
+package secao14.ExercicioFixacaoPolimorfismo.entities;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

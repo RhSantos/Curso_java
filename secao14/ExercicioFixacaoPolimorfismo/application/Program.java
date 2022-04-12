@@ -1,4 +1,4 @@
-package secao14.ExercicioFixacao.application;
+package secao14.ExercicioFixacaoPolimorfismo.application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import secao14.ExercicioFixacao.entities.*;
+import secao14.ExercicioFixacaoPolimorfismo.entities.*;
 
 public class Program {
     public static void main(String[] args) throws ParseException {
