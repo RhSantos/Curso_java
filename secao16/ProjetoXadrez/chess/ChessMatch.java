@@ -1,6 +1,8 @@
 package secao16.ProjetoXadrez.chess;
 
 import secao16.ProjetoXadrez.boardgame.Board;
+import secao16.ProjetoXadrez.boardgame.Position;
+import secao16.ProjetoXadrez.chess_pieces.*;
 
 public class ChessMatch {
 
@@ -8,6 +10,7 @@ public class ChessMatch {
 
     public ChessMatch() {
         board = new Board(8,8);
+        initialSetup();
     }
 
     public ChessPiece[][] getPieces(){
@@ -20,5 +23,12 @@ public class ChessMatch {
         return mat;
     }
 
-    
+    private void initialSetup(){
+        board.placePiece(new Rook(board,Color.WHITE), new Position(0, 0));
+        board.placePiece(new Rook(board,Color.WHITE), new Position(0, 7));
+        board.placePiece(new Rook(board,Color.BLACK), new Position(7, 0));
+        board.placePiece(new Rook(board,Color.BLACK), new Position(7, 7));
+        board.placePiece(new King(board,Color.WHITE), new Position(0, 3));
+        board.placePiece(new King(board,Color.BLACK), new Position(7, 3));
+    }
 }
