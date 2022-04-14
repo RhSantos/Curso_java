@@ -14,38 +14,49 @@ public class UI {
 
     public static void printBoard(ChessPiece[][] pieces) {
         for (int i = 0; i < pieces.length; i++) {
-            System.out.print(ANSI_YELLOW + (8 - i)+ ANSI_RESET + " ");
+            System.out.print(ANSI_RESET +ANSI_YELLOW + (8 - i)+ ANSI_RESET + " ");
             for (int j = 0; j < pieces.length; j++) {
+                String bg = "";
                 if(i % 2 == 0){
-                    if(j % 2 == 0)
-                        System.out.print(ANSI_RESET+DARK);
-                    else 
-                        System.out.print(ANSI_RESET+LIGHT);
+                    if(j % 2 == 0){
+                        System.out.print(DARK);
+                        bg = DARK;
+                    }
+                    else {
+                        System.out.print(LIGHT);
+                        bg = LIGHT;
+                    }
                 }
                 else{
-                    if(j % 2 == 0)
-                        System.out.print(ANSI_RESET+LIGHT);
-                    else 
-                        System.out.print(ANSI_RESET+DARK);      
+                    if(j % 2 == 0){
+                        System.out.print(LIGHT);
+                        bg = LIGHT;
+                    }
+                    else {
+                        System.out.print(DARK);   
+                        bg = DARK;   
+                    }
                 }
-                printPiece(pieces[i][j]);
+                printPiece(pieces[i][j],bg);
+                if(j == pieces.length-1)
+                    System.out.print(ANSI_RESET);
             }
             System.out.println();
         }
-        System.out.println(ANSI_YELLOW +"  a b c d e f g h"+ ANSI_RESET);
+        System.out.println(ANSI_RESET+ANSI_YELLOW +"  a b c d e f g h"+ANSI_RESET);
     }
 
-    private static void printPiece(ChessPiece piece) {
+    private static void printPiece(ChessPiece piece,String bg) {
         if (piece == null) {
-            System.out.print("-"+ANSI_RESET);
+            System.out.print(" ");
         }
         else {
             if (piece.getColor() == Color.WHITE) {
-                System.out.print(ANSI_WHITE + piece + ANSI_RESET);
+                System.out.print(ANSI_WHITE + piece+ANSI_RESET+bg);
 
             }
             else {
-                System.out.print(ANSI_BLACK + piece + ANSI_RESET);
+                System.out.print(ANSI_BLACK + piece+ANSI_RESET+bg);
             }
         }
         System.out.print(" ");
