@@ -1,6 +1,6 @@
-package secao16.ProjetoXadrez.chess;
+package secao16.ProjetoXadrez.src.chess;
 
-import secao16.ProjetoXadrez.boardgame.Position;
+import secao16.ProjetoXadrez.src.boardgame.Position;
 
 public class ChessPosition {
     private Character column;

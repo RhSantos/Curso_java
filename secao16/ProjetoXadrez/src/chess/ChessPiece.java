@@ -1,7 +1,7 @@
-package secao16.ProjetoXadrez.chess;
+package secao16.ProjetoXadrez.src.chess;
 
-import secao16.ProjetoXadrez.boardgame.Board;
-import secao16.ProjetoXadrez.boardgame.Piece;
+import secao16.ProjetoXadrez.src.boardgame.Board;
+import secao16.ProjetoXadrez.src.boardgame.Piece;
 
 public class ChessPiece extends Piece{
     private Color color;

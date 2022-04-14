@@ -1,4 +1,4 @@
-package secao16.ProjetoXadrez.boardgame;
+package secao16.ProjetoXadrez.src.boardgame;
 
 public class Board {
     private int rows;

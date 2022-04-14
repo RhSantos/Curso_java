@@ -1,7 +1,7 @@
-package secao16.ProjetoXadrez.application;
+package secao16.ProjetoXadrez.src.application;
 
-import secao16.ProjetoXadrez.chess.ChessPiece;
-import secao16.ProjetoXadrez.chess.Color;
+import secao16.ProjetoXadrez.src.chess.ChessPiece;
+import secao16.ProjetoXadrez.src.chess.Color;
 
 public class UI {
 
