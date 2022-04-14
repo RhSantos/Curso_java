@@ -1,4 +1,4 @@
-package secao16.ProjetoXadrez.src.application;
+package secao16.ProjetoXadrez.application;
 
 import secao16.ProjetoXadrez.src.chess.ChessMatch;
 

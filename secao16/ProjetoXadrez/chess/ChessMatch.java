@@ -1,4 +1,4 @@
-package secao16.ProjetoXadrez.src.chess;
+package secao16.ProjetoXadrez.chess;
 
 import secao16.ProjetoXadrez.src.boardgame.Board;
 import secao16.ProjetoXadrez.src.chess_pieces.*;

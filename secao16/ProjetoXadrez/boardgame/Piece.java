@@ -1,4 +1,4 @@
-package secao16.ProjetoXadrez.src.boardgame;
+package secao16.ProjetoXadrez.boardgame;
 
 public abstract class Piece {
     protected Position position;
