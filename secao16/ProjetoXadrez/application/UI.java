@@ -1,7 +1,7 @@
 package secao16.ProjetoXadrez.application;
 
-import secao16.ProjetoXadrez.src.chess.ChessPiece;
-import secao16.ProjetoXadrez.src.chess.Color;
+import secao16.ProjetoXadrez.chess.ChessPiece;
+import secao16.ProjetoXadrez.chess.Color;
 
 public class UI {
 
@@ -49,14 +49,15 @@ public class UI {
     private static void printPiece(ChessPiece piece,String bg) {
         if (piece == null) {
             System.out.print(" ");
+            
         }
         else {
             if (piece.getColor() == Color.WHITE) {
-                System.out.print(ANSI_WHITE + piece+ANSI_RESET+bg);
+                System.out.print(ANSI_WHITE+ piece+ANSI_RESET+bg);
 
             }
             else {
-                System.out.print(ANSI_BLACK + piece+ANSI_RESET+bg);
+                System.out.print(ANSI_BLACK+ piece+ANSI_RESET+bg);
             }
         }
         System.out.print(" ");

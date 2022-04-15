@@ -1,7 +1,7 @@
 package secao16.ProjetoXadrez.chess;
 
-import secao16.ProjetoXadrez.src.boardgame.Board;
-import secao16.ProjetoXadrez.src.chess_pieces.*;
+import secao16.ProjetoXadrez.boardgame.Board;
+import secao16.ProjetoXadrez.chess_pieces.*;
 
 public class ChessMatch {
 
@@ -31,7 +31,7 @@ public class ChessMatch {
         placeNewPiece('h',1,new Rook(board,Color.WHITE));
         placeNewPiece('a',8,new Rook(board,Color.BLACK));
         placeNewPiece('h',8,new Rook(board,Color.BLACK));
-        placeNewPiece('g',8,new Rook(board,Color.BLACK));
+        placeNewPiece('g',8,new Rook(board,Color.WHITE));
         placeNewPiece('e',1,new King(board,Color.WHITE));
         placeNewPiece('e',8,new King(board,Color.BLACK));
     }
