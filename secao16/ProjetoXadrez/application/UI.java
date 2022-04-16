@@ -16,27 +16,7 @@ public class UI {
         for (int i = 0; i < pieces.length; i++) {
             System.out.print(ANSI_RESET +ANSI_YELLOW + (8 - i)+ ANSI_RESET + " ");
             for (int j = 0; j < pieces.length; j++) {
-                String bg = "";
-                if(i % 2 == 0){
-                    if(j % 2 == 0){
-                        System.out.print(DARK);
-                        bg = DARK;
-                    }
-                    else {
-                        System.out.print(LIGHT);
-                        bg = LIGHT;
-                    }
-                }
-                else{
-                    if(j % 2 == 0){
-                        System.out.print(LIGHT);
-                        bg = LIGHT;
-                    }
-                    else {
-                        System.out.print(DARK);   
-                        bg = DARK;   
-                    }
-                }
+                String bg = colorBoard(i,j);
                 printPiece(pieces[i][j],bg);
                 if(j == pieces.length-1)
                     System.out.print(ANSI_RESET);
@@ -44,6 +24,29 @@ public class UI {
             System.out.println();
         }
         System.out.println(ANSI_RESET+ANSI_YELLOW +"  a b c d e f g h"+ANSI_RESET);
+    }
+
+    public static String colorBoard(int i,int j){
+        if(i % 2 == 0){
+            if(j % 2 == 0){
+                System.out.print(DARK);
+                return DARK;
+            }
+            else {
+                System.out.print(LIGHT);
+                return LIGHT;
+            }
+        }
+        else{
+            if(j % 2 == 0){
+                System.out.print(LIGHT);
+                return LIGHT;
+            }
+            else {
+                System.out.print(DARK);   
+                return DARK;   
+            }
+        }
     }
 
     private static void printPiece(ChessPiece piece,String bg) {
