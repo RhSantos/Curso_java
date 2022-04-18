@@ -1,6 +1,8 @@
 package secao16.ProjetoXadrez.chess;
 
-public class ChessException extends RuntimeException{
+import secao16.ProjetoXadrez.boardgame.BoardException;
+
+public class ChessException extends BoardException{
     public ChessException(String msg){
         super(msg);
     }
