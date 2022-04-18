@@ -2,7 +2,6 @@ package secao16.ProjetoXadrez.chess;
 
 import secao16.ProjetoXadrez.boardgame.*;
 import secao16.ProjetoXadrez.chess_pieces.*;
-import secao16.ProjetoXadrez.chess.*;
 
 public class ChessMatch {
 

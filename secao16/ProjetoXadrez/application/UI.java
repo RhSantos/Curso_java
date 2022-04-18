@@ -16,6 +16,11 @@ public class UI {
     public static final String LIGHT = "\033[48;5;242m";
     public static final String DARK = "\033[48;5;247m";
 
+    public static void clearScreen(){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
     public static ChessPosition readChessPosition(Scanner sc){
         try{
             String s = sc.nextLine();
