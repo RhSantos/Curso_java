@@ -1,7 +1,7 @@
-package secao18.model.services;
+package secao18.Aluguel_de_Carros.model.services;
 
-import secao18.model.entities.CarRental;
-import secao18.model.entities.Invoice;
+import secao18.Aluguel_de_Carros.model.entities.CarRental;
+import secao18.Aluguel_de_Carros.model.entities.Invoice;
 
 public class RentalService {
     private Double pricePerHour;

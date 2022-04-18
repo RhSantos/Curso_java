@@ -1,4 +1,4 @@
-package secao18.model.entities;
+package secao18.Aluguel_de_Carros.model.entities;
 
 public class Vehicle {
     private String model;

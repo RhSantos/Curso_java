@@ -1,4 +1,4 @@
-package secao18.model.services;
+package secao18.Aluguel_de_Carros.model.services;
 
 public class BrazilTaxService{
 
