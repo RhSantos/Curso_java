@@ -19,10 +19,11 @@ public class Program {
                 Integer votos = Integer.parseInt(fields[1]);
                 eleicao.put(nome, votos);
             }
-            System.out.println("--ELEIÇÃO 2022--\n");
+            System.out.println("\n--ELEIÇÃO 2022--\n");
             for (String key : eleicao.keySet()) {
-                System.out.print("Nome do Candidato: "+key+" Votos: "+eleicao.get(key)+"\n");
+                System.out.print("\nNome do Candidato: "+key+"\nVotos: "+eleicao.get(key)+"\n\n");
             }
+            System.out.println("----------------\n");
         } catch (FileNotFoundException e) {
             System.out.println("File not Found");
         } catch(IOException e){
