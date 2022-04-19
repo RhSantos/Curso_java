@@ -13,7 +13,7 @@ import java.util.Set;
 public class Program {
     public static void main(String[] args) throws ParseException {
         Set<User> set = new HashSet<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("in.txt"))){
+        try (BufferedReader br = new BufferedReader(new FileReader("secao19/ExercicioResolvidoSet/in.txt"))){
             String line;
             
             while((line = br.readLine()) != null){
@@ -22,12 +22,11 @@ public class Program {
                 Date date = Date.from(Instant.parse(fields[1]));
                 set.add(new User(fields[0], date));
             }
+            System.out.println("Total Users: " +set.size());
         } catch (FileNotFoundException e) {
             System.out.println("File not found"); 
         } catch (IOException e) {
             System.out.println("Error reading the file");
         }
-
-        System.out.println("Total Users: " +set.size());
     }
 }
