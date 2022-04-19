@@ -10,6 +10,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import secao19.ExercicioResolvidoSet.entities.User;
+
 public class Program {
     public static void main(String[] args) throws ParseException {
         Set<User> set = new HashSet<>();
