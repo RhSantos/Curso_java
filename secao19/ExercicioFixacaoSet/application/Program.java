@@ -24,5 +24,6 @@ public class Program {
             alunos_cursos.add(sc.nextInt());
         }
         System.out.print("\nTotal Students: "+alunos_cursos.size());
+        sc.close();
     }
 }
