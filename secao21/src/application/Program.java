@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 
 import secao21.src.db.DB;
 import secao21.src.db.DBException;
+import secao21.src.db.DBIntegrityException;
 
 public class Program {
     public static void main(String[] args) {
@@ -21,22 +22,44 @@ public class Program {
         try{
             conn = DB.getConnection();
             st = conn.prepareStatement(
-                "UPDATE seller "+
-                "SET BaseSalary = BaseSalary + ? "+
+                "DELETE FROM department "+
                 "WHERE "+
-                "(DepartmentId = ?)");
-            st.setDouble(1, 200.00);
-            st.setInt(2, 2);
+                "Id = ?");
+            st.setInt(1, 2);
             int rowsAffected = st.executeUpdate();
 
             System.out.println("DONE! - "+rowsAffected+" ROWS AFFECTED!");
         } catch(SQLException e){
-            throw new DBException(e.getMessage());
+            throw new DBIntegrityException(e.getMessage());
         } finally {
             DB.closeStatement(st);
             DB.closeConnection();
         }
 
+
+        //ATUALIZAÇÃO
+        //
+        // Connection conn = null;
+        // PreparedStatement st = null;
+
+        // try{
+        //     conn = DB.getConnection();
+        //     st = conn.prepareStatement(
+        //         "UPDATE seller "+
+        //         "SET BaseSalary = BaseSalary + ? "+
+        //         "WHERE "+
+        //         "(DepartmentId = ?)");
+        //     st.setDouble(1, 200.00);
+        //     st.setInt(2, 2);
+        //     int rowsAffected = st.executeUpdate();
+
+        //     System.out.println("DONE! - "+rowsAffected+" ROWS AFFECTED!");
+        // } catch(SQLException e){
+        //     throw new DBException(e.getMessage());
+        // } finally {
+        //     DB.closeStatement(st);
+        //     DB.closeConnection();
+        // }
 
         //INSERÇÃO
         //
