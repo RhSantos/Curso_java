@@ -13,44 +13,78 @@ import secao21.src.db.DBException;
 
 public class Program {
     public static void main(String[] args) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+
         Connection conn = null;
         PreparedStatement st = null;
 
         try{
             conn = DB.getConnection();
             st = conn.prepareStatement(
-                "insert into seller"+
-                "(Name,Email,BirthDate,BaseSalary,DepartmentId)"+
-                "values"+
-                "(?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
-            st.setString(1, "Carl Purple");
-            st.setString(2, "carl@gmail.com");
-            st.setDate(3, 
-                new java.sql.Date(sdf.parse("22/04/1985").getTime()));
-            st.setDouble(4, 3450.90);
-            st.setInt(5, 4);
+                "UPDATE seller "+
+                "SET BaseSalary = BaseSalary + ? "+
+                "WHERE "+
+                "(DepartmentId = ?)");
+            st.setDouble(1, 200.00);
+            st.setInt(2, 2);
             int rowsAffected = st.executeUpdate();
-            if(rowsAffected > 0){
-                ResultSet rs = st.getGeneratedKeys();
-                while(rs.next()){
-                    int id = rs.getInt(1);
-                    System.out.println("DONE! - ID = "+id);
-                }
-            }
-            else{
-                System.out.println("NO ROWS AFFECTED!");
-            }
 
+            System.out.println("DONE! - "+rowsAffected+" ROWS AFFECTED!");
         } catch(SQLException e){
             throw new DBException(e.getMessage());
-        } catch(ParseException e){
-            throw new DBException(e.getMessage());
-        } finally{
+        } finally {
             DB.closeStatement(st);
             DB.closeConnection();
         }
-        // CONSULTA DEPARTAMENTOS!!
+
+
+        //INSERÇÃO
+        //
+        // SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        // Connection conn = null;
+        // PreparedStatement st = null;
+
+        // try{
+        //     conn = DB.getConnection();
+        //     // st = conn.prepareStatement(
+        //     //     "insert into seller"+
+        //     //     "(Name,Email,BirthDate,BaseSalary,DepartmentId)"+
+        //     //     "values"+
+        //     //     "(?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
+        //     // st.setString(1, "Carl Purple");
+        //     // st.setString(2, "carl@gmail.com");
+        //     // st.setDate(3, 
+        //     //     new java.sql.Date(sdf.parse("22/04/1985").getTime()));
+        //     // st.setDouble(4, 3450.90);
+        //     // st.setInt(5, 4);
+
+        //     st = conn.prepareStatement(
+        //         "insert into department (Name) values ('D1'),('D2')",
+        //         Statement.RETURN_GENERATED_KEYS);
+
+        //     int rowsAffected = st.executeUpdate();
+        //     if(rowsAffected > 0){
+        //         ResultSet rs = st.getGeneratedKeys();
+        //         while(rs.next()){
+        //             int id = rs.getInt(1);
+        //             System.out.println("DONE! - ID = "+id);
+        //         }
+        //     }
+        //     else{
+        //         System.out.println("NO ROWS AFFECTED!");
+        //     }
+
+        // } catch(SQLException e){
+        //     throw new DBException(e.getMessage());
+        // // } catch(ParseException e){
+        // //     throw new DBException(e.getMessage());
+        // } finally{
+        //     DB.closeStatement(st);
+        //     DB.closeConnection();
+        // }
+
+        
+        // CONSULTA
         //
         // Statement st = null;
         // ResultSet rs = null;
@@ -69,5 +103,6 @@ public class Program {
         //     DB.closeStatement(st);
         //     DB.closeConnection();
         // }
+
     }
 }
